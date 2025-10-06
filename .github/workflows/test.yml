@@ -20,6 +20,17 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Cache apt packages (Ubuntu)
+        if: runner.os == 'Linux'
+        uses: actions/cache@v4
+        with:
+          path: |
+            /var/cache/apt/archives
+            /var/lib/apt/lists
+          key: ${{ runner.os }}-apt-${{ hashFiles('.github/workflows/test.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-
+
       - name: Install system dependencies (Ubuntu)
         if: runner.os == 'Linux'
         run: |
