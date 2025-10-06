@@ -1,0 +1,34 @@
+# Development files
+test/
+examples/
+data/
+.github/
+
+# TypeScript source (dist/ is published instead)
+*.ts
+!*.d.ts
+tsconfig.json
+
+# Build artifacts
+build/
+*.node
+
+# Git
+.git
+.gitignore
+.gitattributes
+.gitmodules
+
+# CI/CD
+.github/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Misc
+*.log
+npm-debug.log*
+.DS_Store

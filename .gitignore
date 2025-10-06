@@ -1,0 +1,7 @@
+node_modules/
+build/
+*.node
+.DS_Store
+*.log
+.vitest-cache/
+dist/

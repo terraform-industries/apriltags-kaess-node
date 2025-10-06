@@ -1,0 +1,49 @@
+{
+  "name": "@monumental-works/apriltags-kaess-node",
+  "version": "0.1.0",
+  "description": "Node.js bindings for the AprilTags library written by Michael Kaess",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "install": "cmake-js compile",
+    "test": "npm run build && vitest run",
+    "demo": "npm run build && node examples/detect.js",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "apriltag",
+    "apriltags",
+    "computer-vision",
+    "fiducial-markers",
+    "marker-detection"
+  ],
+  "author": "Ross Gardiner <npm@public.rossng.eu> (https://rossng.eu/)",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src",
+    "apriltags",
+    "CMakeLists.txt",
+    "README.md"
+  ],
+  "dependencies": {
+    "node-addon-api": "^8.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terraform-industries/apriltag-kaess-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/terraform-industries/apriltag-kaess-node/issues"
+  },
+  "homepage": "https://github.com/terraform-industries/apriltag-kaess-node#readme",
+  "devDependencies": {
+    "cmake-js": "^7.3.1",
+    "jimp": "^1.6.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
