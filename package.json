@@ -35,12 +35,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/terraform-industries/apriltag-kaess-node.git"
+    "url": "git+https://github.com/terraform-industries/apriltags-kaess-node.git"
   },
   "bugs": {
-    "url": "https://github.com/terraform-industries/apriltag-kaess-node/issues"
+    "url": "https://github.com/terraform-industries/apriltags-kaess-node/issues"
   },
-  "homepage": "https://github.com/terraform-industries/apriltag-kaess-node#readme",
+  "homepage": "https://github.com/terraform-industries/apriltags-kaess-node#readme",
   "devDependencies": {
     "@release-it/conventional-changelog": "^10.0.1",
     "@types/node": "^24.7.0",
