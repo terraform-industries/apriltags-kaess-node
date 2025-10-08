@@ -30,8 +30,8 @@
     "README.md"
   ],
   "dependencies": {
-    "node-addon-api": "^8.5.0",
-    "cmake-js": "^7.3.1"
+    "cmake-js": "^7.3.1",
+    "node-addon-api": "^8.5.0"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
   "homepage": "https://github.com/terraform-industries/apriltag-kaess-node#readme",
   "devDependencies": {
     "@release-it/conventional-changelog": "^10.0.1",
+    "@types/node": "^24.7.0",
     "jimp": "^1.6.0",
     "prettier": "^3.6.2",
     "release-it": "^19.0.5",
