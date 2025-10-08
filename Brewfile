@@ -1,0 +1,2 @@
+brew "opencv"
+brew "eigen"

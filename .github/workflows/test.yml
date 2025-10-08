@@ -41,10 +41,27 @@ jobs:
             libopencv-dev \
             libeigen3-dev
 
+      - name: Cache Homebrew downloads (macOS)
+        if: runner.os == 'macOS'
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${HOME}/Library/Caches/Homebrew
+          key: brew-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('Brewfile*') }}
+          restore-keys: |
+            brew-${{ runner.os }}-${{ runner.arch }}-
+
+      - name: Setup Homebrew env (macOS)
+        if: runner.os == 'macOS'
+        run: |
+          echo "HOMEBREW_NO_AUTO_UPDATE=1" >> $GITHUB_ENV
+          echo "HOMEBREW_NO_INSTALL_CLEANUP=1" >> $GITHUB_ENV
+
       - name: Install system dependencies (macOS)
         if: runner.os == 'macOS'
         run: |
-          brew install opencv eigen
+          brew update-reset || true
+          brew bundle --no-lock --verbose
 
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
