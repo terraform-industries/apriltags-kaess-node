@@ -1,6 +1,6 @@
 {
   "name": "@monumental-works/apriltags-kaess-node",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node.js bindings for the AprilTags library written by Michael Kaess",
   "type": "module",
   "main": "dist/index.js",
