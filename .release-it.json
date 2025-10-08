@@ -9,7 +9,9 @@
     "releaseName": "v${version}"
   },
   "npm": {
-    "publish": true
+    "publish": true,
+    "publishArgs": ["--provenance", "--access", "public"],
+    "skipChecks": true
   },
   "plugins": {
     "@release-it/conventional-changelog": {
