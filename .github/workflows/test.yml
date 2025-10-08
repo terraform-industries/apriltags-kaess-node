@@ -61,7 +61,7 @@ jobs:
         if: runner.os == 'macOS'
         run: |
           brew update-reset || true
-          brew bundle --no-lock --verbose
+          brew bundle --verbose
 
       - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
